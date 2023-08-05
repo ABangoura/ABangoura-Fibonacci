@@ -15,6 +15,15 @@ public class Fibonacci {
      * @return the nth number of fibonacci sequence.
      */
     public int fib(int n){
-        return 0;
+
+        // Using recursion, we can first set up the two base cases:
+        // n = 0, and n = 1.
+        if(n == 0)
+            return 0; // Fibonacci value of 0 is 0.
+        else if(n == 1)
+            return 1; // Fibonacci value of 1 is 1.
+        // Now we can make recursive calls to the 'fib()' method until it gets to the base cases, then back up the call stack.
+        else
+            return fib(n - 1) + fib(n - 2); // With n-1 and n-2 being the 2 consecutive numbers before n.
     }
 }
